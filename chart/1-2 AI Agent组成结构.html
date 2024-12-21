@@ -1,0 +1,117 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+<pre class="mermaid">
+graph TD
+    subgraph "AI Agent"
+        A[感知模块] -->|环境信息| B[决策模块]
+        B -->|决策| C[执行模块]
+        E[学习模块] -->|优化| B
+        E -->|优化| C
+        A -->|数据| E
+        C -->|结果| E
+    end
+
+    subgraph "环境"
+        D[环境]
+    end
+
+    C -->|行动| D
+    D -->|反馈| A
+</pre>
+
+<br>
+<br>
+<br>
+<pre class="mermaid">
+graph TD
+    A[感知模块] -->|环境信息| B[决策模块]
+    B -->|决策| C[执行模块]
+    C -->|执行结果| D[学习模块]
+    D -->|更新知识| B
+    D -->|优化| A
+    B -->|查询知识| E[知识库]
+    D -->|更新| E
+</pre>
+
+<br>
+<br>
+<br>
+
+<pre class="mermaid">
+graph TD
+    A[感知模块] -->|环境信息| B[决策模块]
+    B -->|决策| C[执行模块]
+    C -->|行动| D[环境]
+    D -->|反馈| A
+    E[学习模块] -->|优化| B
+    E -->|优化| C
+    A -->|数据| E
+    C -->|结果| E
+</pre>
+
+<br>
+<br>
+<br>
+
+
+<pre class="mermaid">
+erDiagram
+    AI_AGENT ||--o{ Perception_Module : contains
+    AI_AGENT ||--o{ Decision_Module : contains
+    AI_AGENT ||--o{ Execution_Module : contains
+    AI_AGENT ||--o{ Learning_Module : contains
+
+    Perception_Module ||--o{ Sensors : uses
+    Perception_Module ||--o{ Data : receives
+
+    Decision_Module ||..o{ Knowledge_Base : references
+    Decision_Module ||--|| Perception_Module : gathers_info_from
+    Decision_Module ||--|| Learning_Module : optimizes_with
+
+    Execution_Module ||--|| Decision_Module : receives_commands_from
+    Execution_Module ||--o{ Actuators : controls
+
+    Learning_Module ||--o{ Data : processes
+    Learning_Module ||--|| Perception_Module : obtains_data_from
+    Learning_Module ||--|| Knowledge_Base : updates
+
+    Sensors {
+        string type
+        string data_format
+    }
+
+    Knowledge_Base {
+        string rules
+        string models
+    }
+
+    Data {
+        string input_data
+        string learning_data
+    }
+
+    Actuators {
+        string type
+        string operation
+    }
+</pre>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        look: "classic",
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<body style="text-align: center">
+
+<pre class="mermaid">
+erDiagram
+    Intelligence ||--o{ AI-Agent : includes
+    Intelligence ||--o{ Traditional-AI : includes
+    Intelligence ||--o{ Human-Intelligence : includes
+    AI-Agent ||--|| Learning-Module : contains
+    AI-Agent ||--|| Decision-Module : contains
+    Traditional-AI ||--|| Rule-Engine : uses
+    Traditional-AI ||--|| Algorithm-Library : uses
+    Human-Intelligence ||--|| Cognitive-Function : possesses
+    Human-Intelligence ||--|| Emotional-System : possesses
+    Learning-Module ||--o{ Data : processes
+    Decision-Module ||--o{ Action : generates
+    Cognitive-Function ||--o{ Experience : accumulates
+    Emotional-System ||--o{ Feeling : produces
+</pre>
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        // //  neutral, default, base, forest, dark
+        theme: 'neutral',
+        look: "classic",
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>
