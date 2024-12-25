@@ -1,0 +1,92 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+<pre class="mermaid">
+erDiagram
+Ai-Agent ||--o{ Task : processes
+Traditional-Automation ||--o{ Task : executes
+Human-Intelligence ||--o{ Task : oversees
+Integrated-System ||--|{ Ai-Agent : includes
+Integrated-System ||--|{ Traditional-Automation : includes
+Integrated-System ||--|{ Human-Intelligence : includes
+Task }|--|| Data : uses
+Ai-Agent ||--o{ Data : analyzes
+Traditional-Automation ||--o{ Data : processes
+Human-Intelligence ||--o{ Data : interprets
+Integrated-System ||--o{ Decision : makes
+Decision }|--|| Ai-Agent : influenced_by
+Decision }|--|| Traditional-Automation : supported_by
+Decision }|--|| Human-Intelligence : guided_by
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<pre class="mermaid">
+
+graph TD
+A[AI Agent] -->|提供智能分析和建议| D[融合决策系统]
+B[传统自动化系统] -->|执行标准化任务| D
+C[人类智能系统] -->|提供战略指导和最终决策| D
+D -->|分配任务| A
+D -->|下达指令| B
+D -->|请求人工干预| C
+A -->|数据分析结果| B
+A -->|决策支持| C
+B -->|执行反馈| A
+B -->|状态报告| C
+C -->|策略调整| A
+C -->|流程优化| B
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<pre class="mermaid">
+
+graph TD
+    A[开始] --> B{任务分类}
+    B --> |简单任务| C[传统自动化系统处理]
+    B --> |需要分析的任务| D[AI Agent处理]
+    B --> |复杂决策任务| E[人类智能系统处理]
+    C --> F{是否需要人工干预?}
+    D --> F
+    F --> |是| E
+    F --> |否| G[执行决策]
+    E --> G
+    G --> H{评估结果}
+    H --> |需要优化| I[更新系统参数]
+    I --> B
+    H --> |满意| J[结束]
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+<pre class="mermaid">
+erDiagram
+    CPU ||--o{ INSTRUCTION-SET : executes
+    INSTRUCTION-SET ||--|{ INSTRUCTION : contains
+    INSTRUCTION {
+        string opcode
+        string operands
+        string addressing_mode
+    }
+    LLM ||--o{ PROMPT : processes
+    PROMPT ||--|{ COMPONENT : contains
+    COMPONENT {
+        string instruction
+        string context
+        string example
+        string constraint
+    }
+    CPU ||--o{ TASK : performs
+    LLM ||--o{ TASK : performs
+    TASK {
+        string type
+        string complexity
+        string domain
+    }
+    INSTRUCTION-SET ||--o{ COMPILER : used_by
+    PROMPT ||--o{ PROMPT-ENGINEER : designed_by
+    COMPILER ||--o{ PROGRAM : generates
+    PROMPT-ENGINEER ||--o{ AI-APPLICATION : creates
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+graph TD
+    A[用户输入] --> B{任务类型}
+    B -->|结构化计算任务| C[CPU处理]
+    B -->|自然语言任务| D[LLM处理]
+    C --> E[编译器]
+    E --> F[生成机器码]
+    F --> G[CPU执行指令]
+    D --> H[Prompt工程]
+    H --> I[生成Prompt]
+    I --> J[LLM处理Prompt]
+    G --> K[输出结果]
+    J --> K
+    K --> L[用户反馈]
+    L --> |优化指令集| E
+    L --> |优化Prompt| H
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>
