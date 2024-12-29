@@ -1,0 +1,151 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+<pre class="mermaid">
+graph TD
+    A[开始] --> B[识别当前AI模型能力]
+    B --> C[分析用户需求]
+    C --> D[设计初始Prompt策略]
+    D --> E[测试Prompt效果]
+    E --> F{效果是否满意?}
+    F -- 否 --> G[分析问题]
+    G --> H[优化Prompt设计]
+    H -- 优化 --> E
+    F -- 是 --> I[部署Prompt]
+    I --> J[收集使用反馈]
+    J --> K[持续优化]
+    K --> L[适应新的AI模型更新]
+    L --> B
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+graph LR
+    A[Prompt工程] --> B[目标定义]
+    A --> C[上下文提供]
+    A --> D[指令设计]
+    A --> E[示例展示]
+    A --> F[约束设置]
+    B --> G[明确任务]
+    B --> H[定义输出格式]
+    C --> I[背景信息]
+    C --> J[相关知识]
+    D --> K[清晰指令]
+    D --> L[步骤引导]
+    E --> M[输入示例]
+    E --> N[期望输出]
+    F --> O[输出限制]
+    F --> P[伦理约束]
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<pre class="mermaid">
+graph TD
+    A[开始] --> B[定义任务目标]
+    B --> C[收集相关背景信息]
+    C --> D[设计清晰指令]
+    D --> E{是否需要示例?}
+    E -- 是 --> F[添加输入输出示例]
+    E -- 否 --> G[设置约束条件]
+    F --> G
+    G --> H[组合Prompt元素]
+    H --> I[测试Prompt]
+    I --> J{效果是否满意?}
+    J -- 否 --> K[分析问题并修改]
+    K --> D
+    J -- 是 --> L[完成Prompt设计]
+    L --> M[结束]
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<pre class="mermaid">
+erDiagram
+    USER ||--o{ Prompt : designs
+    Prompt ||--o{ AI-MODEL : guides
+    AI-MODEL ||--o{ OUTPUT : generates
+    Prompt {
+        string context
+        string instruction
+        string examples
+        string constraints
+    }
+    AI-MODEL {
+        string model_type
+        int parameter_count
+        string training_data
+    }
+    OUTPUT {
+        string content
+        float relevance_score
+        float accuracy_score
+    }
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<pre class="mermaid">
+graph TD
+    A[用户输入] --> B[Prompt设计]
+    B --> C[Prompt优化]
+    C --> D[AI模型处理]
+    D --> E[输出生成]
+    E --> F[输出评估]
+    F -- 不满足要求 --> C
+    F -- 满足要求 --> G[最终输出]
+    C -- 反馈循环 --> B
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

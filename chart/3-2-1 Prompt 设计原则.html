@@ -1,0 +1,267 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 5, 'rankSpacing': 10}}}%%
+graph TD
+    A[开始] --> B[分析任务需求]
+    B --> C[确定关键上下文信息]
+    C --> D[选择相关领域知识]
+    D --> E[设计示例结构]
+    E --> F[创建简单示例]
+    F --> G[创建复杂/变体示例]
+    G --> H[整合上下文和示例]
+    H --> I[编写任务指令]
+    I --> J[组合完整Prompt]
+    J --> K[测试Prompt效果]
+    K --> L{效果是否满意?}
+    L -- 否 --> M[分析问题]
+    M --> N[调整上下文或示例]
+    N --> J
+    L -- 是 --> O[完成Prompt设计]
+    O --> P[结束]
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 10}}}%%
+graph LR
+    A[上下文提供与示例演示] --> B[上下文信息]
+    A --> C[示例展示]
+    B --> D[任务背景]
+    B --> E[目的说明]
+    B --> F[领域知识]
+    C --> G[输入-输出对]
+    C --> H[多样性示例]
+    C --> I[关键点解释]
+    D --> J[时间/空间背景]
+    D --> K[相关事件/情况]
+    E --> L[期望结果]
+    E --> M[评判标准]
+    F --> N[专业术语]
+    F --> O[基本概念]
+    G --> P[简单示例]
+    G --> Q[复杂示例]
+    H --> R[不同难度]
+    H --> S[不同角度]
+    I --> T[重点强调]
+    I --> U[注意事项]
+</pre>
+
+<br>
+<br>
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 5, 'rankSpacing': 10}}}%%
+graph LR
+    A[开始] --> B[识别任务<br>核心需求]
+    B --> C
+
+    subgraph Prompt设计
+    C[选择明确的<br>动词和指令] --> D[1.提供具体上下文信息<br> 2.使用限定词缩小范围<br> 3.检查并替换模糊词语<br>]
+    D --> G{任务是否复杂?}
+    G -- 是 --> H[将任务分解<br>为步骤]
+    G -- 否 --> I[完善最终Prompt]
+    H --> I
+    end
+
+    subgraph 测试和优化
+    I --> J[测试Prompt]
+    J --> K{是否达到<br>预期效果?}
+    K -- 否 --> L[分析问题<br>并修改]
+    L --> C
+    K -- 是 --> M[完成Prompt设计]
+    end
+
+    M --> N[结束]
+</pre>
+
+<br>
+<br>
+
+
+<pre class="mermaid">
+graph TD
+    A[清晰性与特异性原则] --> B[明确指令]
+    A --> C[具体上下文]
+    A --> D[限定词使用]
+    A --> E[避免模糊词语]
+    A --> F[任务分解]
+    B --> G[动词选择]
+    B --> H[步骤说明]
+    C --> I[背景描述]
+    C --> J[目标定义]
+    D --> K[数量指定]
+    D --> L[范围界定]
+    E --> M[客观描述]
+    E --> N[精确术语]
+    F --> O[子任务划分]
+    F --> P[逻辑顺序]
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<pre class="mermaid">
+graph TD
+    A[开始] --> B[识别任务核心需求]
+    B --> C[选择明确的动词和指令]
+    C --> D[提供具体上下文信息]
+    D --> E[使用限定词缩小范围]
+    E --> F[检查并替换模糊词语]
+    F --> G{任务是否复杂?}
+    G -- 是 --> H[将任务分解为步骤]
+    G -- 否 --> I[完善最终Prompt]
+    H --> I
+    I --> J[测试Prompt]
+    J --> K{是否达到预期效果?}
+    K -- 否 --> L[分析问题并修改]
+    L --> C
+    K -- 是 --> M[完成Prompt设计]
+    M --> N[结束]
+</pre>
+
+<br>
+<br>
+<br>
+<pre class="mermaid">
+graph LR
+    A[开始] --> B[识别任务核心需求]
+    B --> C[选择明确的动词和指令]
+    C --> D[提供具体上下文信息]
+    D --> E[使用限定词缩小范围]
+    E --> F[检查并替换模糊词语]
+    F --> G{任务是否复杂?}
+    G -- 是 --> H[将任务分解为步骤]
+    G -- 否 --> I[完善最终Prompt]
+    H --> I
+    I --> J[测试Prompt]
+    J --> K{是否达到预期效果?}
+    K -- 否 --> L[分析问题并修改]
+    L --> C
+    K -- 是 --> M[完成Prompt设计]
+    M --> N[结束]
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<pre class="mermaid">
+graph TD
+    A[开始] --> B[定义任务目标]
+    B --> C[收集相关背景信息]
+    C --> D[设计清晰指令]
+    D --> E{是否需要示例?}
+    E -- 是 --> F[添加输入输出示例]
+    E -- 否 --> G[设置约束条件]
+    F --> G
+    G --> H[组合Prompt元素]
+    H --> I[测试Prompt]
+    I --> J{效果是否满意?}
+    J -- 否 --> K[分析问题并修改]
+    K --> D
+    J -- 是 --> L[完成Prompt设计]
+    L --> M[结束]
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<pre class="mermaid">
+erDiagram
+    USER ||--o{ Prompt : designs
+    Prompt ||--o{ AI-MODEL : guides
+    AI-MODEL ||--o{ OUTPUT : generates
+    Prompt {
+        string context
+        string instruction
+        string examples
+        string constraints
+    }
+    AI-MODEL {
+        string model_type
+        int parameter_count
+        string training_data
+    }
+    OUTPUT {
+        string content
+        float relevance_score
+        float accuracy_score
+    }
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<pre class="mermaid">
+graph TD
+    A[用户输入] --> B[Prompt设计]
+    B --> C[Prompt优化]
+    C --> D[AI模型处理]
+    D --> E[输出生成]
+    E --> F[输出评估]
+    F -- 不满足要求 --> C
+    F -- 满足要求 --> G[最终输出]
+    C -- 反馈循环 --> B
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 10}}}%%
+graph LR
+    A[角色定义与情感激发] --> B[角色设定]
+    A --> C[情感注入]
+    A --> D[语言风格]
+    A --> E[情境创造]
+    B --> F[身份描述]
+    B --> G[专业背景]
+    B --> H[价值观念]
+    C --> I[情感词汇]
+    C --> J[情感强度]
+    C --> K[情感目标]
+    D --> L[表达方式]
+    D --> M[专业术语]
+    D --> N[修辞技巧]
+    E --> O[时空背景]
+    E --> P[社会环境]
+    E --> Q[人际关系]
+    F --> R[职业/身份]
+    G --> S[知识领域]
+    G --> T[经验积累]
+    H --> U[核心信念]
+    H --> V[道德标准]
+    I --> W[积极/消极词汇]
+    J --> X[情感层次]
+    K --> Y[预期反应]
+    L --> Z[正式/非正式]
+    M --> AA[行业jargon]
+    N --> AB[比喻/夸张等]
+</pre>
+<br>
+<br>
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 10}}}%%
+graph TD
+    A[开始] --> B[分析整体任务目标]
+    B --> C[识别主要子任务]
+    C --> D[评估子任务复杂度]
+    D --> E{是否需要进一步分解?}
+    E -- 是 --> F[细分子任务]
+    F --> D
+    E -- 否 --> G[设计子任务执行顺序]
+    G --> H[为每个子任务编写清晰指令]
+    H --> I[添加中间检查点]
+    I --> J[整合所有步骤into完整Prompt]
+    J --> K[测试Prompt效果]
+    K --> L{效果是否满意?}
+    L -- 否 --> M[分析问题]
+    M --> N[调整分解或指令]
+    N --> J
+    L -- 是 --> O[完成Prompt设计]
+    O --> P[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 3, 'rankSpacing': 20}}}%%
+graph TD
+    A[任务分解与步骤引导] --> B[任务分析]
+    A --> C[子任务设计]
+    A --> D[步骤序列化]
+    A --> E[指令明确化]
+    B --> F[目标识别]
+    B --> G[复杂度评估]
+    C --> H[独立子任务]
+    C --> I[子任务关联]
+    D --> J[线性步骤]
+    D --> K[条件分支]
+    E --> L[动作指令]
+    E --> M[输出要求]
+    F --> N[主要目标]
+    F --> O[次要目标]
+    G --> P[时间估计]
+    G --> Q[资源需求]
+    H --> R[最小可执行单元]
+    I --> S[数据流]
+    I --> T[控制流]
+    J --> U[步骤编号]
+    K --> V[决策点]
+    L --> W[具体操作说明]
+    M --> X[中间检查点]
+</pre>
+
+<br>
+<br>
+<br>
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>
