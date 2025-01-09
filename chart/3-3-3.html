@@ -1,0 +1,87 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 0, 'rankSpacing': 15}}}%%
+graph LR
+    A[Chain-of-Thought推理] --> B[步骤分解]
+    A --> C[逻辑连接]
+    A --> D[中间验证]
+    A --> E[最终综合]
+    B --> F[问题理解]
+    B --> G[子目标识别]
+    B --> H[解决方案设计]
+    C --> I[因果关系]
+    C --> J[推理规则]
+    C --> K[假设验证]
+    D --> L[阶段性检查]
+    D --> M[错误纠正]
+    D --> N[替代方案]
+    E --> O[结果汇总]
+    E --> P[一致性检验]
+    E --> Q[结论推导]
+    F --> R[关键信息提取]
+    G --> S[任务分解]
+    H --> T[方法选择]
+    I --> U[原因分析]
+    J --> V[逻辑框架]
+    K --> W[条件推理]
+    L --> X[中间结果评估]
+    M --> Y[修正策略]
+    N --> Z[多路径探索]
+    O --> AA[要点归纳]
+    P --> AB[逻辑连贯性]
+    Q --> AC[最终答案]
+</pre>
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 0, 'rankSpacing': 15}}}%%
+graph TD
+    A[开始] --> B[分析问题复杂度]
+    B --> C[设计推理步骤框架]
+    C --> D[编写示范推理过程]
+    D --> E[构建Prompt with CoT引导]
+    E --> F[执行模型推理]
+    F --> G[分析推理输出]
+    G --> H{推理质量是否满足要求?}
+    H -- 否 --> I[识别问题环节]
+    I --> J[调整推理引导]
+    J --> E
+    H -- 是 --> K[验证最终结果]
+    K --> L{结果是否正确?}
+    L -- 否 --> M[分析错误原因]
+    M --> J
+    L -- 是 --> N[记录成功策略]
+    N --> O[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

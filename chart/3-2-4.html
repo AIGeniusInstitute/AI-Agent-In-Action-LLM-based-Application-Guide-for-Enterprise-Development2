@@ -1,0 +1,122 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 0, 'rankSpacing': 15}}}%%
+graph TD
+    A[开始] --> B[分析任务需求]
+    B --> C[选择适合的角色]
+    C --> D[定义角色背景和特征]
+    D --> E[设计角色语言风格] --> F[确定情感基调]
+    F --> G[选择情感词汇和表达方式]
+    G --> H[创造情境背景]
+    H --> I[整合角色和<br>情感元素到Prompt]
+    I --> J[添加具体任务指令]
+    J --> K[测试Prompt效果]
+    K --> L{效果是否满意?}
+    L -- 否 --> M[分析问题]
+    M --> N[调整角色或情感设置]
+    N --> I
+    L -- 是 --> O[完成Prompt设计]
+    O --> P[结束]
+</pre>
+<br>
+<br>
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 0, 'rankSpacing': 15}}}%%
+graph LR
+    A[偏见避免与伦理考量] --> B[偏见识别]
+    A --> C[伦理框架]
+    A --> D[公平性设计]
+    A --> E[监控机制]
+    B --> F[语言审查]
+    B --> G[上下文分析]
+    B --> H[多样性评估]
+    C --> I[道德准则]
+    C --> J[法律合规]
+    C --> K[隐私保护]
+    D --> L[包容性语言]
+    D --> M[多角度思考]
+    D --> N[平衡报告]
+    E --> O[输出评估]
+    E --> P[反馈机制]
+    E --> Q[持续改进]
+    F --> R[中性词汇]
+    G --> S[文化敏感性]
+    H --> T[代表性样本]
+    I --> U[伤害预防]
+    J --> V[版权尊重]
+    K --> W[数据匿名化]
+    L --> X[性别中立]
+    M --> Y[跨文化视角]
+    N --> Z[利弊权衡]
+    O --> AA[公平性指标]
+    P --> AB[用户报告]
+    Q --> AC[模型微调]
+</pre>
+<br>
+<br>
+
+
+<br>
+<br>
+
+<br>
+<br>
+<pre class="mermaid">
+    %%{init: {'flowchart': {'nodeSpacing': 0, 'rankSpacing': 15}}}%%
+graph TD
+    A[开始] --> B[分析任务需求]
+    B --> C[审查Prompt<br>识别潜在偏见风险]
+    C --> E[使用中性和包容性词汇]
+    E --> F[设置伦理准则和边界]
+    F --> G[添加多样化示例和上下文]
+    G --> H[设计公平性检查机制<br>整合完整Prompt]
+    H --> J[测试Prompt]
+    J --> K{是否存在偏见或伦理问题?}
+    K -- 是 --> L[分析并修正问题]
+    L --> H
+    K -- 否 --> M[最终审核]
+    M --> N{是否通过审核?}
+    N -- 否 --> O[进行必要调整]
+    O --> M
+    N -- 是 --> P[部署Prompt]
+    P --> Q[持续监控和改进]
+    Q --> R[结束]
+</pre>
+<br>
+<br>
+
+
+<br>
+<br>
+
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 0, 'rankSpacing': 15}}}%%
+graph LR
+    A[Few-shot提示技术] --> B[示例选择]
+    A --> C[示例组织]
+    A --> D[模式引导]
+    A --> E[任务描述]
+    B --> F[多样性]
+    B --> G[代表性]
+    B --> H[难度梯度]
+    C --> I[结构设计]
+    C --> J[顺序安排]
+    D --> K[隐含规则]
+    D --> L[解题思路]
+    E --> M[目标明确化]
+    E --> N[输入输出规范]
+    F --> O[不同类型]
+    G --> P[关键特征]
+    H --> Q[简单到复杂]
+    I --> R[统一格式]
+    J --> S[逻辑递进]
+    K --> T[模式识别]
+    L --> U[推理过程]
+    M --> V[任务边界]
+    N --> W[期望输出]
+</pre>
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 0, 'rankSpacing': 15}}}%%
+graph TD
+    A[开始] --> B[分析任务需求]
+    B --> C[选择代表性示例]
+    C --> D[设计示例结构]
+    D --> E[组织示例顺序]
+    E --> F[编写任务描述]
+    F --> G[整合Prompt元素]
+    G --> H[测试Few-shot性能]
+    H --> I{性能是否满足要求?}
+    I -- 否 --> J[分析问题]
+    J --> K[调整示例或描述]
+    K --> G
+    I -- 是 --> L[记录成功策略]
+    L --> M[评估泛化能力]
+    M --> N[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

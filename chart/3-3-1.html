@@ -1,0 +1,79 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 0, 'rankSpacing': 15}}}%%
+graph LR
+    A[Zero-shot提示技术] --> B[任务描述]
+    A --> C[知识迁移]
+    A --> D[推理引导]
+    A --> E[上下文增强]
+    B --> F[目标明确化]
+    B --> G[输入输出规范]
+    B --> H[评判标准]
+    C --> I[概念类比]
+    C --> J[领域知识激活]
+    D --> K[思考步骤]
+    D --> L[逻辑框架]
+    E --> M[背景信息]
+    E --> N[相关例子]
+    F --> O[任务类型识别]
+    G --> P[数据格式说明]
+    H --> Q[性能指标定义]
+    I --> R[相似任务对比]
+    J --> S[跨领域知识应用]
+    K --> T[问题分解]
+    L --> U[推理模式]
+    M --> V[情境描述]
+    N --> W[间接示范]
+</pre>
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 0, 'rankSpacing': 15}}}%%
+graph TD
+    A[开始] --> B[分析目标任务]
+    B --> C[设计清晰的任务描述]
+    C --> D[识别相关的先验知识]
+    D --> E[构建任务推理框架]
+    E --> F[添加上下文信息]
+    F --> G[组合Prompt元素]
+    G --> H[测试Zero-shot性能]
+    H --> I{性能是否满足要求?}
+    I -- 否 --> J[分析失败原因]
+    J --> K[调整Prompt设计]
+    K --> G
+    I -- 是 --> L[记录成功策略]
+    L --> M[探索泛化到类似任务]
+    M --> N[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

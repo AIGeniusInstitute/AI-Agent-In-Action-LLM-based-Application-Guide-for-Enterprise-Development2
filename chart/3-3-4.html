@@ -1,0 +1,80 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 0, 'rankSpacing': 15}}}%%
+graph LR
+    A[CoT思维树技术] --> B[根节点问题]
+    A --> C[分支生成]
+    A --> D[节点评估]
+    A --> E[路径选择]
+    A --> F[深度控制]
+    B --> G[问题分解]
+    B --> H[初始假设]
+    C --> I[多角度思考]
+    C --> J[假设拓展]
+    D --> K[可行性分析]
+    D --> L[结果预测]
+    E --> M[优劣比较]
+    E --> N[风险评估]
+    F --> O[复杂度限制]
+    F --> P[重要性排序]
+    G --> Q[子问题识别]
+    H --> R[初始条件]
+    I --> S[跨领域联想]
+    J --> T[逻辑推演]
+    K --> U[资源约束]
+    L --> V[影响评估]
+    M --> W[量化指标]
+    N --> X[不确定性分析]
+    O --> Y[计算效率]
+    P --> Z[关键路径]
+</pre>
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 0, 'rankSpacing': 15}}}%%
+graph TD
+    A[开始] --> B[定义根问题]
+    B --> C[生成初始思考分支]
+    C --> D[评估每个分支]
+    D --> E{是否需要进一步展开?}
+    E -- 是 --> F[选择promising分支]
+    F --> G[拓展子分支]
+    G --> D
+    E -- 否 --> H[比较所有路径]
+    H --> I[选择最优路径]
+    I --> J[综合结果]
+    J --> K[生成最终决策]
+    K --> L[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>
