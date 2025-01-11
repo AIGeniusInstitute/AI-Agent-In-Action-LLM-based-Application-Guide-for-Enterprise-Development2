@@ -1,0 +1,81 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 10}}}%%
+graph LR
+    A[文本生成Prompt优化] --> B[任务定义]
+    A --> C[上下文信息]
+    A --> D[结构设计]
+    A --> E[风格指导]
+    A --> F[创意元素]
+    B --> G[文本类型]
+    B --> H[目标受众]
+    B --> I[主要目的]
+    C --> J[背景资料]
+    C --> K[关键词/概念]
+    C --> L[参考资源]
+    D --> M[内容框架]
+    D --> N[段落安排]
+    D --> O[逻辑流程]
+    E --> P[语气设定]
+    E --> Q[表达方式]
+    E --> R[专业度要求]
+    F --> S[独特视角]
+    F --> T[创新表达]
+    F --> U[思维拓展]
+
+
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph TD
+    A[开始] --> B[分析文本生成需求]
+    B --> C[定义清晰的任务目标]
+    C --> D[收集相关背景信息]
+    D --> E[设计文本结构框架]
+    E --> F[确定写作风格和语气]
+    F --> G[加入创意激发元素]
+    G --> H[组合Prompt元素]
+    H --> I[测试初始Prompt]
+    I --> J{生成结果是否满意?}
+    J -- 否 --> K[分析不足之处]
+    K --> L[调整Prompt内容]
+    L --> H
+    J -- 是 --> M[微调和优化]
+    M --> N[最终Prompt确定]
+    N --> O[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

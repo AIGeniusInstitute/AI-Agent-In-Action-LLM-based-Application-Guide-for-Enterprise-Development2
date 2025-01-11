@@ -1,0 +1,80 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 10}}}%%
+graph LR
+    A[Prompt注入攻击防御] --> B[输入处理]
+    A --> C[上下文管理]
+    A --> D[模型增强]
+    A --> E[运行时监控]
+    A --> F[响应策略]
+    B --> G[验证]
+    B --> H[清洗]
+    B --> I[规范化]
+    C --> J[隔离]
+    C --> K[沙箱]
+    C --> L[权限控制]
+    D --> M[对抗训练]
+    D --> N[安全微调]
+    D --> O[知识注入]
+    E --> P[异常检测]
+    E --> Q[行为分析]
+    E --> R[审计日志]
+    F --> S[拒绝服务]
+    F --> T[安全重定向]
+    F --> U[错误模糊处理]
+</pre>
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph TD
+    A[开始] --> B[接收用户输入]
+    B --> C[输入验证和清洗]
+    C --> D{输入是否安全?}
+    D -- 否 --> E[拒绝或安全重定向]
+    D -- 是 --> F[上下文隔离]
+    F --> G[权限检查]
+    G --> H{权限是否足够?}
+    H -- 否 --> E
+    H -- 是 --> I[模型处理]
+    I --> J[输出生成]
+    J --> K[输出安全检查]
+    K --> L{输出是否安全?}
+    L -- 否 --> M[输出净化]
+    L -- 是 --> N[返回结果]
+    M --> N
+    E --> O[记录并报告]
+    N --> P[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

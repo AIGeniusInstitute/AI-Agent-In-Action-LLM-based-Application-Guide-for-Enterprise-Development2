@@ -1,0 +1,80 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 10}}}%%
+graph LR
+    A[敏感信息处理策略] --> B[识别与分类]
+    A --> C[保护措施]
+    A --> D[访问控制]
+    A --> E[数据生命周期管理]
+    A --> F[合规性保障]
+    B --> G[自动化识别]
+    B --> H[风险评估]
+    B --> I[分级分类]
+    C --> J[加密技术]
+    C --> K[脱敏处理]
+    C --> L[安全存储]
+    D --> M[身份验证]
+    D --> N[授权机制]
+    D --> O[活动监控]
+    E --> P[数据采集]
+    E --> Q[使用和处理]
+    E --> R[存储和销毁]
+    F --> S[法规遵从]
+    F --> T[隐私政策]
+    F --> U[审计机制]
+</pre>
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph TD
+    A[开始] --> B[接收数据]
+    B --> C[自动化敏感信息识别]
+    C --> D{是否包含敏感信息?}
+    D -- 是 --> E[分类和风险评估]
+    D -- 否 --> F[正常处理]
+    E --> G[确定保护级别]
+    G --> H[应用加密/脱敏措施]
+    H --> I[设置访问控制]
+    I --> J[记录处理活动]
+    J --> K[数据使用和分析]
+    K --> L[定期审查和更新]
+    L --> M{是否需要继续保留?}
+    M -- 是 --> N[安全存储]
+    M -- 否 --> O[安全销毁]
+    F --> P[结束]
+    N --> P
+    O --> P
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

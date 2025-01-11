@@ -1,0 +1,78 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 10}}}%%
+graph LR
+    A[图像处理Prompt设计] --> B[内容描述]
+    A --> C[风格指定]
+    A --> D[技术要求]
+    A --> E[构图指导]
+    A --> F[参考引用]
+    B --> G[主体对象]
+    B --> H[背景环境]
+    B --> I[细节特征]
+    C --> J[艺术风格]
+    C --> K[色彩方案]
+    C --> L[纹理效果]
+    D --> M[处理技术]
+    D --> N[特殊效果]
+    D --> O[质量参数]
+    E --> P[布局安排]
+    E --> Q[视角选择]
+    E --> R[比例关系]
+    F --> S[样例图片]
+    F --> T[艺术家风格]
+    F --> U[类似作品]
+</pre>
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph TD
+    A[开始] --> B[分析图像处理需求]
+    B --> C[确定主要内容和对象]
+    C --> D[描述风格和氛围]
+    D --> E[指定技术处理要求]
+    E --> F[提供构图指导]
+    F --> G[添加参考示例]
+    G --> H[整合为完整Prompt]
+    H --> I[执行AI图像处理]
+    I --> J{结果是否满意?}
+    J -- 否 --> K[分析问题]
+    K --> L[调整Prompt]
+    L --> H
+    J -- 是 --> M[微调和优化]
+    M --> N[最终图像确认]
+    N --> O[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

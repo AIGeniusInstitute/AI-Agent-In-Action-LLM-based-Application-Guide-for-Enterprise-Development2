@@ -1,0 +1,79 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 10}}}%%
+graph LR
+    A[问答系统Prompt设计] --> B[问题分析]
+    A --> C[上下文整合]
+    A --> D[回答结构]
+    A --> E[推理引导]
+    A --> F[知识融入]
+    B --> G[问题类型]
+    B --> H[关键词识别]
+    B --> I[意图理解]
+    C --> J[背景信息]
+    C --> K[相关限制]
+    C --> L[历史交互]
+    D --> M[格式要求]
+    D --> N[内容组织]
+    D --> O[详细程度]
+    E --> P[步骤划分]
+    E --> Q[逻辑链接]
+    E --> R[假设验证]
+    F --> S[领域知识]
+    F --> T[参考资料]
+    F --> U[最新信息]
+</pre>
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 5, 'rankSpacing': 10}}}%%
+graph TD
+    A[开始] --> B[接收用户问题]
+    B --> C[分析问题类型和意图]
+    C --> D[提取关键信息和实体]
+    D --> E[检索相关上下文和知识]
+    E --> F[设计初始Prompt]
+    F --> G[添加结构化回答示例]
+    G --> H[引入推理步骤]
+    H --> I[整合领域知识]
+    I --> J[生成最终Prompt]
+    J --> K[提交给AI模型处理]
+    K --> L[分析AI回答]
+    L --> M{回答是否满足要求?}
+    M -- 否 --> N[调整Prompt]
+    N --> J
+    M -- 是 --> O[输出最终回答]
+    O --> P[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 10}}}%%
+graph LR
+    A[NLP任务Prompt优化] --> B[任务定义]
+    A --> C[语言特性]
+    A --> D[上下文信息]
+    A --> E[示例设计]
+    A --> F[输出格式]
+    B --> G[任务类型]
+    B --> H[目标说明]
+    B --> I[评估标准]
+    C --> J[语法结构]
+    C --> K[词汇选择]
+    C --> L[语用特点]
+    D --> M[领域知识]
+    D --> N[文化背景]
+    D --> O[时间性信息]
+    E --> P[多样性]
+    E --> Q[代表性]
+    E --> R[难度梯度]
+    F --> S[结构要求]
+    F --> T[细节程度]
+    F --> U[风格指导]
+</pre>
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph TD
+    A[开始] --> B[分析NLP任务需求]
+    B --> C[确定任务类型和目标]
+    C --> D[设计任务描述]
+    D --> E[整合语言学特性]
+    E --> F[提供上下文信息]
+    F --> G[创建示例集]
+    G --> H[指定输出格式]
+    H --> I[组合Prompt元素]
+    I --> J[测试初始Prompt]
+    J --> K{性能是否满足要求?}
+    K -- 否 --> L[分析问题]
+    L --> M[调整Prompt]
+    M --> I
+    K -- 是 --> N[微调和优化]
+    N --> O[最终Prompt确定]
+    O --> P[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

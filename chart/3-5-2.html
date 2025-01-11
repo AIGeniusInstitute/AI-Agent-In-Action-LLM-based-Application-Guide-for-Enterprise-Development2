@@ -1,0 +1,77 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 10}}}%%
+graph LR
+    A[隐私保护Prompt设计] --> B[数据收集]
+    A --> C[数据处理]
+    A --> D[数据存储]
+    A --> E[用户控制]
+    A --> F[合规性]
+    B --> G[最小化原则]
+    B --> H[目的限制]
+    B --> I[匿名收集]
+    C --> J[本地处理]
+    C --> K[加密技术]
+    C --> L[数据脱敏]
+    D --> M[存储限制]
+    D --> N[安全措施]
+    D --> O[访问控制]
+    E --> P[同意管理]
+    E --> Q[透明度]
+    E --> R[撤回权]
+    F --> S[法规遵从]
+    F --> T[跨境数据]
+    F --> U[审计追踪]
+</pre>
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph TD
+    A[开始] --> B[评估数据需求]
+    B --> C[设计最小化数据收集策略]
+    C --> D[实施数据匿名化措施]
+    D --> E[集成用户同意机制]
+    E --> F[设计数据本地处理方案]
+    F --> G[制定数据存储和删除策略]
+    G --> H[实施访问控制和加密]
+    H --> I[设计用户数据控制界面]
+    I --> J[进行法律合规性检查]
+    J --> K{是否符合隐私要求?}
+    K -- 否 --> L[调整Prompt设计]
+    L --> B
+    K -- 是 --> M[最终Prompt确定]
+    M --> N[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

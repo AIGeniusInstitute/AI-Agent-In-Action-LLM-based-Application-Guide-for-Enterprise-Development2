@@ -1,0 +1,78 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 10}}}%%
+graph LR
+    A[数据安全与合规性保障] --> B[技术措施]
+    A --> C[管理流程]
+    A --> D[风险管理]
+    A --> E[法律合规]
+    A --> F[隐私保护]
+    B --> G[加密]
+    B --> H[访问控制]
+    B --> I[监控和审计]
+    C --> J[政策制定]
+    C --> K[流程优化]
+    C --> L[事件响应]
+    D --> M[风险评估]
+    D --> N[威胁建模]
+    D --> O[漏洞管理]
+    E --> P[法规遵从]
+    E --> Q[合同管理]
+    E --> R[跨境数据传输]
+    F --> S[隐私设计]
+    F --> T[同意管理]
+    F --> U[数据主体权利]
+</pre>
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph TD
+    A[开始] --> B[数据收集和分类]
+    B --> C[风险评估]
+    C --> D[安全措施实施]
+    D --> E[隐私保护设计]
+    E --> F[合规性检查]
+    F --> G{是否符合要求?}
+    G -- 否 --> H[调整和优化]
+    H --> C
+    G -- 是 --> I[持续监控]
+    I --> J[定期审核]
+    J --> K{是否需要更新?}
+    K -- 是 --> L[更新安全措施]
+    L --> C
+    K -- 否 --> M[报告生成]
+    M --> N[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

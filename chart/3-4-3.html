@@ -1,0 +1,78 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 10}}}%%
+graph LR
+    A[代码生成Prompt工程] --> B[需求分析]
+    A --> C[语言规范]
+    A --> D[结构设计]
+    A --> E[质量控制]
+    A --> F[示例参考]
+    B --> G[功能描述]
+    B --> H[输入输出]
+    B --> I[性能要求]
+    C --> J[语言选择]
+    C --> K[版本指定]
+    C --> L[框架集成]
+    D --> M[模块划分]
+    D --> N[接口定义]
+    D --> O[设计模式]
+    E --> P[代码风格]
+    E --> Q[效率优化]
+    E --> R[安全考虑]
+    F --> S[类似代码]
+    F --> T[API用法]
+    F --> U[常见模式]
+</pre>
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph TD
+    A[开始] --> B[分析编程任务需求]
+    B --> C[确定编程语言和框架]
+    C --> D[设计代码结构和接口]
+    D --> E[编写功能描述和示例]
+    E --> F[指定代码风格和最佳实践]
+    F --> G[添加性能和安全要求]
+    G --> H[整合所有元素到Prompt]
+    H --> I[生成初始代码]
+    I --> J{代码是否满足要求?}
+    J -- 否 --> K[分析问题]
+    K --> L[调整Prompt]
+    L --> H
+    J -- 是 --> M[代码优化建议]
+    M --> N[最终代码确认]
+    N --> O[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

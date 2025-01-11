@@ -1,0 +1,77 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 0, 'rankSpacing': 15}}}%%
+graph LR
+    A[检索增强生成RAG] --> B[查询分析]
+    A --> C[知识检索]
+    A --> D[信息融合]
+    A --> E[内容生成]
+    B --> F[关键词提取]
+    B --> G[语义理解]
+    C --> H[索引搜索]
+    C --> I[相关性排序]
+    D --> J[上下文整合]
+    D --> K[信息验证]
+    E --> L[文本生成]
+    E --> M[一致性检查]
+    F --> N[实体识别]
+    G --> O[意图分析]
+    H --> P[向量检索]
+    I --> Q[重要性评分]
+    J --> R[知识嵌入]
+    K --> S[事实核查]
+    L --> T[自然语言处理]
+    M --> U[逻辑连贯性]
+</pre>
+<br>
+<br>
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 0, 'rankSpacing': 15}}}%%
+graph TD
+    A[开始] --> B[接收用户查询]
+    B --> C[分析查询意图]
+    C --> D[执行知识库检索]
+    D --> E[对检索结果排序]
+    E --> F[选择Top-K相关文档]
+    F --> G[将文档融入上下文]
+    G --> H[生成模型处理]
+    H --> I[生成初始回答]
+    I --> J[一致性和准确性检查]
+    J --> K{是否需要进一步优化?}
+    K -- 是 --> L[调整检索或生成策略]
+    L --> D
+    K -- 否 --> M[输出最终回答]
+    M --> N[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>
