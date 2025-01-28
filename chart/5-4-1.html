@@ -1,0 +1,76 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph LR
+    A[规划模式] --> B[状态表示]
+    A --> C[目标定义]
+    A --> D[行动模型]
+    A --> E[规划算法]
+    A --> F[执行监控]
+    B --> G[状态空间]
+    B --> H[状态转换函数]
+    C --> I[目标条件]
+    C --> J[效用函数]
+    D --> K[前置条件]
+    D --> L[效果描述]
+    E --> M[搜索策略]
+    E --> N[启发函数]
+    F --> O[执行跟踪]
+    F --> P[重规划触发]
+</pre>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph TD
+    A[开始] --> B[定义问题]
+    B --> C[初始化起始状态]
+    C --> D[检查当前状态]
+    D --> E{是否达到目标?}
+    E -- 是 --> F[返回计划]
+    E -- 否 --> G[生成可能的行动]
+    G --> H[评估行动]
+    H --> I[选择最佳行动]
+    I --> J[应用行动]
+    J --> K[更新当前状态]
+    K --> D
+    F --> L[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

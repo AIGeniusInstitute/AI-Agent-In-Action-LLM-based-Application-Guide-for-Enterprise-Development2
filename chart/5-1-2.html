@@ -1,0 +1,81 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph LR
+    A[AI Agent 架构设计模式] --> B[分层架构]
+    A --> C[事件驱动架构]
+    A --> D[微服务架构]
+    A --> E[反应式架构]
+    A --> F[管道-过滤器架构]
+    B --> G[感知层]
+    B --> H[处理层]
+    B --> I[决策层]
+    B --> J[执行层]
+    C --> K[事件生产者]
+    C --> L[事件总线]
+    C --> M[事件消费者]
+    D --> N[服务1]
+    D --> O[服务2]
+    D --> P[服务3]
+    E --> Q[消息驱动]
+    E --> R[弹性]
+    E --> S[响应性]
+    F --> T[过滤器1]
+    F --> U[过滤器2]
+    F --> V[过滤器3]
+</pre>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 50}}}%%
+graph TD
+    A[客户端请求] --> B{API 网关}
+    B --> C[服务发现]
+    C --> D[负载均衡]
+    D --> E[服务1]
+    D --> F[服务2]
+    D --> G[服务3]
+    E --> H[数据库]
+    E --> K[结果聚合]
+    F --> K
+    G --> K
+    K --> L[响应客户端]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

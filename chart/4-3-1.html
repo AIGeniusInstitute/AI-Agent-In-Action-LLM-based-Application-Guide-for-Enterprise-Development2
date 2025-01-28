@@ -1,0 +1,174 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 20}}}%%
+graph TD
+    User([User])
+    PG[Plan generation]
+    TE[Task executor]
+    PRE[Prompt/response engineering]
+    VS[(Vector store)]
+
+    User -->|prompt| PG
+    PG -->|task| TE
+    TE -->|augmented results| PRE
+    PRE -->|optimised response| User
+
+    subgraph Agent
+        PG
+        TE
+        PRE
+    end
+
+    subgraph Local
+        VS
+    end
+
+    TE <-->|retrieve knowledge/return| VS
+
+    style Agent rx:10,ry:10
+    style Local stroke-dasharray: 5 5
+<br>
+<br>
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 20}}}%%
+graph TB
+    subgraph Environment[环境]
+        UserInput[用户输入] --> Agent
+    end
+
+    subgraph Agent[智能代理系统]
+        Agent --> Perception
+    end
+
+    subgraph Perception[感知模块]
+        Inputs[多模态输入]
+        Inputs --> |图像/音频/文本等| ProcessedInput[处理后的输入]
+    end
+
+    subgraph Brain[大脑模块]
+        subgraph Storage[存储系统]
+            Memory[记忆系统]
+            Knowledge[知识库]
+        end
+
+        subgraph Cognitive[认知系统]
+            DecisionMaking[决策制定]
+            PlanningReasoning[规划/推理]
+        end
+
+        subgraph Learning[学习系统]
+            Summary[总结] --> Memory
+            Recall[回忆] --> Memory
+            Learn[学习] --> Knowledge
+            Retrieve[检索] --> Knowledge
+        end
+
+        GeneralizeTransfer[泛化/迁移]
+    end
+
+    subgraph Action[行动模块]
+        subgraph Output[输出系统]
+            Text[文本生成]
+            Tools[工具调用]
+            Embodiment[具象化执行]
+        end
+    end
+
+    ProcessedInput --> Brain
+    Brain --> Action
+    Action --> Environment
+
+    %% 连接关系
+    Memory <--> DecisionMaking
+    Knowledge <--> DecisionMaking
+    DecisionMaking <--> PlanningReasoning
+    PlanningReasoning --> GeneralizeTransfer
+    GeneralizeTransfer --> Output
+
+    %% 样式
+    classDef module fill:#f9f,stroke:#333,stroke-width:2px
+    classDef system fill:#bbf,stroke:#333,stroke-width:1px
+    class Environment,Agent,Perception,Brain,Action module
+    class Storage,Cognitive,Learning,Output system
+</pre>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 20}}}%%
+graph TD
+    A[用户界面] --> B[API 网关]
+    B --> C[查询处理服务]
+    C --> D[检索服务]
+    C --> E[生成服务]
+    D --> F[向量数据库]
+    D --> G[全文索引]
+    E --> H[语言模型]
+    F --> I[知识库更新服务]
+    G --> I
+    I --> J[原始数据源]
+</pre>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph TD
+    A[开始] --> B[数据收集和分类]
+    B --> C[风险评估]
+    C --> D[安全措施实施]
+    D --> E[隐私保护设计]
+    E --> F[合规性检查]
+    F --> G{是否符合要求?}
+    G -- 否 --> H[调整和优化]
+    H --> C
+    G -- 是 --> I[持续监控]
+    I --> J[定期审核]
+    J --> K{是否需要更新?}
+    K -- 是 --> L[更新安全措施]
+    L --> C
+    K -- 否 --> M[报告生成]
+    M --> N[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

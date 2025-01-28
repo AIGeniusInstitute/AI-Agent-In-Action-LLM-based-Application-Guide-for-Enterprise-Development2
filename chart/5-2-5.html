@@ -1,0 +1,75 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph LR
+    A[Self-RAG框架] --> B[检索模块]
+    A --> C[生成模块]
+    A --> D[自反思模块]
+    A --> E[修正模块]
+    B --> F[信息源选择]
+    B --> G[查询优化]
+    C --> H[初始生成]
+    C --> I[迭代生成]
+    D --> J[一致性检查]
+    D --> K[相关性评估]
+    D --> L[不确定性识别]
+    E --> M[内容修正]
+    E --> N[检索策略调整]
+</pre>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph TD
+    A[开始] --> B[接收用户查询]
+    B --> C[初始信息检索]
+    C --> D[生成初始回答]
+    D --> E[自反思评估]
+    E --> F{是否满足质量要求?}
+    F -- 否 --> G[分析问题]
+    G --> H[调整检索策略]
+    H --> I[重新检索信息]
+    I --> J[修正回答]
+    J --> E
+    F -- 是 --> K[输出最终回答]
+    K --> L[更新模型]
+    L --> M[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

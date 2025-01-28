@@ -1,0 +1,330 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 50, 'rankSpacing': 50}}}%%
+graph LR
+    %% 定义节点
+    User[用户]
+    Prompt[提示词]
+    Response[响应]
+    Planning[规划]
+    GenerateTask[生成任务]
+    SingleTaskAgent[单任务智能体]
+    Replan[重新规划]
+    ReAct[ReAct/ReWOO]
+    Iterate[迭代...]
+
+    %% 定义连接
+    User --> Prompt
+    Prompt -.--> Planning
+    Planning --> GenerateTask
+    GenerateTask --执行--> SingleTaskAgent
+    SingleTaskAgent -.任务结果.-> Replan
+    Replan --> GenerateTask
+    Replan -.-> Response
+    Response -.-> User
+
+    %% 添加迭代标记
+    Iterate --> GenerateTask
+
+
+    %% 应用样式
+    class User user
+    class Prompt prompt
+    class Response response
+    class Planning,GenerateTask,SingleTaskAgent,Replan circle
+    class ReAct react
+</pre>
+<br>
+<br>
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 50, 'rankSpacing': 50}}}%%
+graph LR
+    subgraph Environment[环境]
+        direction TB
+        UserInput[用户]
+    end
+
+    subgraph Core[AI Agent 智能代理核心系统]
+        direction LR
+        subgraph Perception[感知]
+            direction TB
+            Inputs[输入] --> ProcessedInput[处理]
+        end
+
+        subgraph Brain[大脑]
+            direction TB
+            subgraph Storage[存储]
+                direction LR
+                Memory[记忆] --- Knowledge[知识]
+            end
+
+            subgraph Process[处理]
+                direction LR
+                DecisionMaking[决策] --- Planning[规划]
+            end
+
+            subgraph Learning[学习]
+                direction LR
+                Summary[总结] --- Recall[回忆]
+            end
+        end
+
+        subgraph Action[行动]
+            direction TB
+            Text[文本] --> Tools[工具] --> Embodiment[执行]
+        end
+    end
+
+    %% 主要流程连接
+    Environment --用户输入--> Perception
+    Perception --> Brain
+    Brain --执行计划--> Action
+    Action --系统输出--> Environment
+
+    %% 内部连接
+    Storage --> Process
+    Process --> Learning
+    Learning --> Storage
+
+    %% 样式
+    classDef module fill:#fff,stroke:#333,stroke-width:2px
+    classDef system fill:#fff,stroke:#333,stroke-width:1px
+    class Environment,Core module
+    class Perception,Brain,Action,Storage,Process,Learning system
+</pre>
+<br>
+<br>
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 50, 'rankSpacing': 50}}}%%
+graph LR
+    subgraph Environment[环境]
+        direction LR
+        UserInput[用户输入]
+    end
+
+    subgraph Agent[智能代理系统]
+        direction TB
+        AgentCore[Agent核心]
+    subgraph Perception[感知模块]
+        direction TB
+        Inputs[多模态输入]
+        ProcessedInput[处理后的输入]
+        Inputs --> ProcessedInput
+    end
+
+    subgraph Brain[大脑模块]
+        direction LR
+        subgraph Storage[存储系统]
+            direction LR
+            Memory[记忆系统]
+            Knowledge[知识库]
+        end
+
+        subgraph Cognitive[认知系统]
+            direction LR
+            DecisionMaking[决策制定]
+            PlanningReasoning[规划/推理]
+        end
+
+        subgraph Learning[学习系统]
+            direction LR
+            Summary[总结]
+            Recall[回忆]
+            Learn[学习]
+            Retrieve[检索]
+        end
+
+        GeneralizeTransfer[泛化/迁移]
+    end
+
+    subgraph Action[行动模块]
+        direction LR
+        subgraph Output[输出系统]
+            direction LR
+            Text[文本生成]
+            Tools[工具调用]
+            Embodiment[具象化执行]
+        end
+    end
+    end
+
+
+
+    UserInput --> AgentCore
+    AgentCore --> Perception
+    ProcessedInput --> Brain
+    Brain --> Action
+    Action --> Environment
+
+    %% 连接关系
+    Memory <--> DecisionMaking
+    Knowledge <--> DecisionMaking
+    DecisionMaking <--> PlanningReasoning
+    PlanningReasoning --> GeneralizeTransfer
+    GeneralizeTransfer --> Output
+
+    Summary --> Memory
+    Recall --> Memory
+    Learn --> Knowledge
+    Retrieve --> Knowledge
+
+    %% 样式
+    classDef module fill:#f9f,stroke:#333,stroke-width:2px
+    classDef system fill:#bbf,stroke:#333,stroke-width:1px
+    class Environment,Agent,Perception,Brain,Action module
+    class Storage,Cognitive,Learning,Output system
+</pre>
+<br>
+<br>
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 50, 'rankSpacing': 50}}}%%
+graph
+    subgraph Environment[环境]
+        UserInput[用户输入] --> Agent
+    end
+
+    subgraph Agent[智能代理系统]
+        Agent --> Perception
+    end
+
+    subgraph Perception[感知模块]
+        Inputs[多模态输入]
+        Inputs --> |图像/音频/文本等| ProcessedInput[处理后的输入]
+    end
+
+    subgraph Brain[大脑模块]
+        subgraph Storage[存储系统]
+            Memory[记忆系统]
+            Knowledge[知识库]
+        end
+
+        subgraph Cognitive[认知系统]
+            DecisionMaking[决策制定]
+            PlanningReasoning[规划/推理]
+        end
+
+        subgraph Learning[学习系统]
+            Summary[总结] --> Memory
+            Recall[回忆] --> Memory
+            Learn[学习] --> Knowledge
+            Retrieve[检索] --> Knowledge
+        end
+
+        GeneralizeTransfer[泛化/迁移]
+    end
+
+    subgraph Action[行动模块]
+        subgraph Output[输出系统]
+            Text[文本生成]
+            Tools[工具调用]
+            Embodiment[具象化执行]
+        end
+    end
+
+    ProcessedInput --> Brain
+    Brain --> Action
+    Action --> Environment
+
+    %% 连接关系
+    Memory <--> DecisionMaking
+    Knowledge <--> DecisionMaking
+    DecisionMaking <--> PlanningReasoning
+    PlanningReasoning --> GeneralizeTransfer
+    GeneralizeTransfer --> Output
+
+    %% 样式
+    classDef module fill:#fff,stroke:#333,stroke-width:2px
+    classDef system fill:#ff,stroke:#333,stroke-width:1px
+
+    class Environment,Agent,Perception,Brain,Action module
+    class Storage,Cognitive,Learning,Output system
+</pre>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 20}}}%%
+graph TD
+    A[开始] --> B[初始化 AI Agent]
+    B --> C[接收输入]
+    C --> D{是否需要决策?}
+    D -- 是 --> E[查询知识库]
+    E --> F[生成决策]
+    F --> G[执行动作]
+    G --> H[观察结果]
+    H --> I[更新知识库]
+    I --> C
+    D -- 否 --> C
+</pre>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph TD
+    A[开始] --> B[数据收集和分类]
+    B --> C[风险评估]
+    C --> D[安全措施实施]
+    D --> E[隐私保护设计]
+    E --> F[合规性检查]
+    F --> G{是否符合要求?}
+    G -- 否 --> H[调整和优化]
+    H --> C
+    G -- 是 --> I[持续监控]
+    I --> J[定期审核]
+    J --> K{是否需要更新?}
+    K -- 是 --> L[更新安全措施]
+    L --> C
+    K -- 否 --> M[报告生成]
+    M --> N[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

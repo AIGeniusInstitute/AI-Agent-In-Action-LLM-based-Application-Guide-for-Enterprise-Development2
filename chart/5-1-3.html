@@ -1,0 +1,83 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph LR
+    A[设计模式选择] --> B[系统需求]
+    A --> C[技术约束]
+    A --> D[团队能力]
+    A --> E[业务目标]
+    B --> F[功能需求]
+    B --> G[非功能需求]
+    C --> H[性能要求]
+    C --> I[可扩展性]
+    C --> J[安全性]
+    D --> K[技术栈]
+    D --> L[经验水平]
+    E --> M[成本控制]
+    E --> N[时间限制]
+    F --> O[架构评估]
+    G --> O
+    H --> O
+    I --> O
+    J --> O
+    K --> O
+    L --> O
+    M --> O
+    N --> O
+    O --> P[最终决策]
+</pre>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 50}}}%%
+graph TD
+    A[客户端请求] --> B{API 网关}
+    B --> C[服务发现]
+    C --> D[负载均衡]
+    D --> E[服务1]
+    D --> F[服务2]
+    D --> G[服务3]
+    E --> H[数据库]
+    E --> K[结果聚合]
+    F --> K
+    G --> K
+    K --> L[响应客户端]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

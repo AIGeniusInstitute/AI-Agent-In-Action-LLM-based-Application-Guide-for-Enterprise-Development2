@@ -1,0 +1,45 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 30}}}%%
+graph TD
+    A[用户界面] --> B[对话管理系统]
+    B --> C[自然语言理解]
+    B --> D[知识库查询]
+    B --> E[回答生成]
+    C --> F[大语言模型]
+    D --> G[知识图谱]
+    E --> F
+    B --> H[人工转接]
+</pre>
+<br>
+<br>
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

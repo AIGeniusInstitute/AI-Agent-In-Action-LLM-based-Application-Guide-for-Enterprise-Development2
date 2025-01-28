@@ -235,7 +235,7 @@ AI Agent 架构设计的重要性不言而喻。它是构建高效、可靠、�
 * 概念之间的关系：
 
 ```mermaid
-graph TD
+graph LR
     A[AI Agent 架构设计模式] --> B[分层架构]
     A --> C[事件驱动架构]
     A --> D[微服务架构]
@@ -445,7 +445,7 @@ asyncio.run(main())
 * 概念之间的关系：
 
 ```mermaid
-graph TD
+graph LR
     A[设计模式选择] --> B[系统需求]
     A --> C[技术约束]
     A --> D[团队能力]
@@ -2037,7 +2037,7 @@ Self-RAG框架代表了AI系统向更高级认知能力发展的重要趋势。�
 * 概念结构与核心要素组成：
 
 ```mermaid
-graph TD
+graph LR
     A[工具使用模式] --> B[工具库]
     A --> C[工具选择器]
     A --> D[工具执行器]
@@ -3671,7 +3671,7 @@ GPT助手工具使用实践的未来发展趋势包括：
 * 概念结构与核心要素组成：
 
 ```mermaid
-graph TD
+graph LR
     A[规划模式] --> B[状态表示]
     A --> C[目标定义]
     A --> D[行动模型]

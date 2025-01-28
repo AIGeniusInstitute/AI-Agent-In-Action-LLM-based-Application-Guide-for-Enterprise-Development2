@@ -1,0 +1,185 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 50, 'rankSpacing': 50}}}%%
+graph TB
+    subgraph "Single Agent"
+        LLM((LLM))
+        T1[Tool 1]
+        T2[Tool 2]
+        T3[Tool 3]
+        LLM --> T1
+        LLM --> T2
+        LLM --> T3
+    end
+</pre>
+<br>
+<br>
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 50, 'rankSpacing': 50}}}%%
+graph TB
+    subgraph "Network"
+        A1[Agent 1]
+        A2[Agent 2]
+        A3[Agent 3]
+        A4[Agent 4]
+        A1 <--> A2
+        A2 <--> A3
+        A3 <--> A4
+        A4 <--> A1
+        A1 <--> A3
+        A2 <--> A4
+    end
+</pre>
+<br>
+<br>
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 50, 'rankSpacing': 50}}}%%
+graph TB
+    subgraph "Supervisor"
+        S[Supervisor]
+        SA1[Agent 1]
+        SA2[Agent 2]
+        SA3[Agent 3]
+        S --> SA1
+        S --> SA2
+        S --> SA3
+    end
+</pre>
+<br>
+<br>
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 50, 'rankSpacing': 50}}}%%
+graph TB
+    subgraph "Supervisor as tools"
+        LLM((LLM))
+        ST1[Supervisor 1]
+        ST2[Supervisor 2]
+        ST3[Supervisor 3]
+        LLM --> ST1
+        LLM --> ST2
+        LLM --> ST3
+    end
+</pre>
+<br>
+<br>
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 50, 'rankSpacing': 50}}}%%
+graph TB
+    subgraph "Hierarchical"
+        H1[Agent 1]
+        H2[Agent 2]
+        H3[Agent 3]
+        H4[Agent 4]
+        H5[Agent 5]
+        H6[Agent 6]
+        H7[Agent 7]
+        H1 --> H2
+        H1 --> H3
+        H1 --> H4
+        H2 --> H5
+        H3 --> H6
+        H4 --> H7
+    end
+</pre>
+<br>
+<br>
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 50, 'rankSpacing': 50}}}%%
+graph TB
+    subgraph "Custom"
+        C1[Agent 1]
+        C2[Agent 2]
+        C3[Agent 3]
+        C4[Agent 4]
+        C5[Agent 5]
+        C6[Agent 6]
+        C7[Agent 7]
+        C1 --> C2
+        C2 --> C3
+        C3 --> C4
+        C4 --> C5
+        C5 --> C6
+        C6 --> C7
+        C7 --> C1
+        C3 --> C6
+        C2 --> C5
+    end
+</pre>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+sequenceDiagram
+    participant User as 用户
+    participant Planner as 规划器
+    participant Worker as 执行器
+    participant Solver as 求解器
+
+    User->>Planner: 输入任务
+    Planner->>Planner: 生成执行计划
+    Planner->>Worker: 传递工具调用序列
+    loop 执行循环
+        Worker->>Worker: 执行工具
+        Worker->>Worker: 变量替换
+    end
+    Worker->>Solver: 传递执行结果
+    Solver->>User: 返回最终答案
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

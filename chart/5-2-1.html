@@ -1,0 +1,77 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph TD
+    A[提示词] -->|直接流向| B((生成))
+    B -->|生成响应| C[响应]
+    B -.->|输出| D[输出文本]
+    D -.->|反馈| E((反思))
+    E -.->|生成| F[反思文本]
+    F -.->|迭代| B
+
+
+    style B fill:#E0FFFF,stroke:#000
+    style E fill:#E0FFFF,stroke:#000
+    style A fill:#F0F8FF,stroke:#000
+    style C fill:#98FB98,stroke:#000
+    style D fill:#FFE4B5,stroke:#000
+    style F fill:#FFE4B5,stroke:#000
+</pre>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+graph TD
+    A[开始] --> B[初始化系统]
+    B --> C[接收任务]
+    C --> D[执行模块处理任务]
+    D --> E[监控模块观察]
+    E --> F[评估模块分析]
+    F --> G{性能是否满足要求?}
+    G -- 是 --> H[记录成功经验]
+    G -- 否 --> I[学习模块分析原因]
+    I --> J[调整模块优化策略]
+    J --> K[更新系统参数]
+    H --> L[任务完成?]
+    K --> L
+    L -- 否 --> C
+    L -- 是 --> M[结束]
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

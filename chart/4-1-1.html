@@ -1,0 +1,54 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 20}}}%%
+graph TD
+    User[User]
+    PG[Plan generation]
+    TE[Task executor]
+    PRE[Prompt/response engineering]
+    VS[Vector store]
+
+    User -->|prompt| PG
+    PG -->|task| TE
+    TE -->|augmented results| PRE
+    PRE -->|optimised response| User
+
+    subgraph Agent
+        PG
+        TE
+        PRE
+    end
+
+    subgraph Local
+        VS
+    end
+
+    TE <-->|retrieve knowledge/return| VS
+<br>
+<br>
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

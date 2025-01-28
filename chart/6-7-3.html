@@ -1,0 +1,50 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 30}}}%%
+graph TD
+    A[接收用户输入] --> B[更新对话状态]
+    B --> C[策略选择]
+    C --> D{选择动作类型}
+    D -- 询问 --> E[生成问题]
+    D -- 提供信息 --> F[检索/生成信息]
+    D -- 确认 --> G[生成确认语句]
+    D -- 结束对话 --> H[生成结束语]
+    E --> I[执行选定动作]
+    F --> I
+    G --> I
+    H --> I
+    I --> J[更新对话历史]
+    J --> K[准备下一轮对话]
+</pre>
+<br>
+<br>
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

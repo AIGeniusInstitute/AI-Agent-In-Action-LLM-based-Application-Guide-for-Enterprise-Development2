@@ -1,0 +1,87 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align: center">
+
+
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 50, 'rankSpacing': 100}}}%%
+graph LR
+    subgraph ReWOO架构
+
+        Planner[规划器] --> Worker[执行器]
+        Worker --> Solver[求解器]
+
+        subgraph Planner[规划器模块]
+
+            Plan[计划生成] --> VarSub[变量替换]
+        end
+
+        subgraph Worker[执行器模块]
+
+            ToolExec[工具执行] --> ResultCollect[结果收集]
+        end
+
+        subgraph Solver[求解器模块]
+
+            Analysis[结果分析] --> Answer[答案生成]
+        end
+    end
+
+
+    class Planner,Worker,Solver module
+    class Plan,VarSub,ToolExec,ResultCollect,Analysis,Answer component
+</pre>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 10, 'rankSpacing': 20}}}%%
+sequenceDiagram
+    participant User as 用户
+    participant Planner as 规划器
+    participant Worker as 执行器
+    participant Solver as 求解器
+
+    User->>Planner: 输入任务
+    Planner->>Planner: 生成执行计划
+    Planner->>Worker: 传递工具调用序列
+    loop 执行循环
+        Worker->>Worker: 执行工具
+        Worker->>Worker: 变量替换
+    end
+    Worker->>Solver: 传递执行结果
+    Solver->>User: 返回最终答案
+</pre>
+<br>
+<br>
+
+
+
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        //  neutral, default, base, forest, dark
+        theme: "neutral",
+        // elk,dagre,topDown,td,lr, leftToRight,tdSimple
+        layout: "dagre",
+    });
+
+</script>
+</body>
+</html>

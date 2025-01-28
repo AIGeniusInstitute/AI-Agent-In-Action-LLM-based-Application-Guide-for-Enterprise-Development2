@@ -1,5 +1,70 @@
 <html>
 <body style="text-align: center">
+<br>
+<br>
+<br>
+<br>
+
+<pre class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 20}}}%%
+graph TB
+    subgraph APPLICATIONS
+        app1[Workhelix]
+        app2[Woebot Health]
+        app3[WORKERA]
+        app4[BEARING ai]
+        app5[kira learning]
+        app6[VALIDMIND]
+        app7[SpeechLab]
+        app8[credo ai]
+        app9[ECHELON|AI]
+        app10[NETAIL]
+        app11[common sense]
+        app12[esteam ai]
+        app13[meeno]
+    end
+
+    subgraph AGENTIC_ORCHESTRATION_LAYER
+        orch1[LangChain]
+        orch2[CrewAI]
+        orch3[AG]
+    end
+
+    subgraph FOUNDATION_MODELS
+        model1[OpenAI]
+        model2[ANTHROPIC]
+        model3[Meta]
+    end
+
+    subgraph CLOUD_INFRASTRUCTURE
+        cloud1[AWS]
+        cloud2[Google Cloud]
+        cloud3[Azure]
+        cloud4[snowflake]
+    end
+
+    subgraph SEMICONDUCTORS
+        semi1[NVIDIA]
+        semi2[AMD]
+        semi3[intel]
+    end
+
+    SEMICONDUCTORS --> CLOUD_INFRASTRUCTURE
+    CLOUD_INFRASTRUCTURE --> FOUNDATION_MODELS
+    FOUNDATION_MODELS --> AGENTIC_ORCHESTRATION_LAYER
+    AGENTIC_ORCHESTRATION_LAYER --> APPLICATIONS
+
+style APPLICATIONS fill:#87CEEB,stroke:#000
+style AGENTIC_ORCHESTRATION_LAYER fill:#87CEEB,stroke:#000
+style FOUNDATION_MODELS fill:#87CEEB,stroke:#000
+style CLOUD_INFRASTRUCTURE fill:#87CEEB,stroke:#000
+style SEMICONDUCTORS fill:#87CEEB,stroke:#000
+</pre>
+
+<br>
+<br>
+<br>
+<br>
 
 <pre class="mermaid">
 erDiagram
